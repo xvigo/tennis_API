@@ -6,7 +6,7 @@ The API provides access to courts, reservations, users and court surfaces. It fo
 
 ## Base URL
 
-The base URL for all API endpoints is: `localhost:80/api/V1`
+The base URL for all API endpoints is: `localhost:80/api/v1`
 
 ## Endpoints
 
