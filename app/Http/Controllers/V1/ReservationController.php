@@ -64,6 +64,7 @@ class ReservationController extends Controller
         $existReservation = Reservation::where('end', '>=', $validated['start'])
                                         ->where('start', '<=', $validated['end'])
                                         ->where('court_id', '=', $validated['courtId'])
+                                        ->where('id', '!=', $reservation->id)
                                         ->count();
         if ($existReservation > 0) {
             abort(409, "Reservation conflict: Another reservation already exists at the given time.");

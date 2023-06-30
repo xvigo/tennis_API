@@ -13,7 +13,7 @@ class UpdateReservationRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return $this->user()->phone === $this->phoneNumber;
+        return !isset($this->phoneNumber) ? $this->user()->phone === $this->phoneNumber : true;
     }
 
     /**
