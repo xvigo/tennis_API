@@ -16,7 +16,7 @@ class ReservationPriceResource extends JsonResource
     {
         $duration = date_diff(date_create($this->end), date_create($this->start));
         $minutesDuration = $duration->h * 60 + $duration->i;    
-        $minuteRate = $this->gameType == 'singles' ? $this->surface->price : $this->court->surface->price * 1.5; 
+        $minuteRate = $this->game_type === 'singles' ? $this->court->surface->price : $this->court->surface->price * 1.5; 
         $totalPrice = $minutesDuration * $minuteRate;
 
         return [
