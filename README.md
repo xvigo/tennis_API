@@ -23,7 +23,7 @@ The base URL for all API endpoints is: `localhost:80/api/V1`
 
 - `GET /reservations`: Retrieve an array of reservation items. Also supports filtering using GET parameters eg. *?courtId=9&phoneNumber=480-984-8944*
 - `GET /reservations/{id}`: Retrieve details of a specific reservation item.
-- `POST /reservations`: Create a new reservation item. Total price for the registration is returned in response.
+- `POST /reservations`: Create a new reservation item. Total price for the reservation is returned in response.
 - `PUT /reservations/{id}`: Update a specific reservation item. Only author of the reservation is authorized.
 - `DELETE /reservations/{id}`: Delete a specific reservation item. Only author of the reservation is authorized.
 
